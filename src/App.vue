@@ -1,30 +1,50 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <main>
+    <MySteps :model="items" aria-label="Form Steps"/>
+    <router-view v-slot="{Component}" :formData="formObject" @prevPage="prevPage($event)" @nextPage="nextPage($event)" @complete="complete">
+     <keep-alive>
+       <component :is="Component" />
+     </keep-alive>
+   </router-view>
+  </main>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
 
-nav {
-  padding: 30px;
+export default {
+  name: 'App',
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+  data() {
+    return {
+      items: [{
+        label: 'Page 1',
+        to: '/'
+      }, {
+        label: 'Page 2',
+        to: '/p2'
+      }, {
+        label: 'Page 3',
+        to: '/p3'
+      }]
+    }
+  },
 
-    &.router-link-exact-active {
-      color: #42b983;
+  methods: {
+    nextPage(event) {
+      // console.log(event.data);
+      this.$router.push(this.items[event.pageIndex + 1].to);
+    },
+    prevPage(event) {
+      console.log(event.pageIndex);
+      this.$router.push(this.items[event.pageIndex - 1].to);
     }
   }
 }
+</script>
+
+<style>
+  main {
+    padding: 0 1rem;
+    min-height: 100vh;
+  }
 </style>

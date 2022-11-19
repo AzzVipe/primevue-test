@@ -1,18 +1,32 @@
 <template>
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+  <TabMenu :model="items"></TabMenu>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
-export default {
-  name: 'HomeView',
-  components: {
-    HelloWorld
+  export default {
+    name: 'HomeView',
+
+    data() {
+      return {
+        items: [
+        {
+          label: 'Test',
+          // icon: 'pi pi-fw pi-home',
+          to: '/test'
+        }
+        ]
+      }
+    }
   }
-}
+
 </script>
+
+<style>
+
+  #app {
+    font-family: "Poppins", sans-serif;
+  }
+
+</style>
+
