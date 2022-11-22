@@ -1,10 +1,22 @@
 <template>
 	<div class="container">
-		<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Sit optio autem eius. Hic illum tenetur consectetur qui, architecto quis perferendis facilis veniam? Facilis sed ab commodi, dicta recusandae similique placeat?</p>
+		<h1>What is the purpose of your building ?</h1>
+		<div class="cards-container">
+			<div class="cards">
+				<div class="card" @click="nextPage('listed property')">
+					<img src="../assets/commercial-building.png" alt="">
+					<h1>Commercial</h1>
+				</div>
 
+				<div class="card" @click="nextPage('conservation area')">
+					<img src="../assets/house.png" alt="">
+					<h1>Domestic</h1>
+				</div>
+			</div>
+		</div>
 		<div class="buttons">
-			<PrimaryButton label="Back" class="pi pi-arrow-left" @click="prevPage"/>
-			<PrimaryButton label="Next" class="pi pi-arrow-right" iconPos="right" @click="nextPage"/>
+			<PrimaryButton icon="pi pi-arrow-left" class="p-button-rounded" @click="prevPage"/>
+			<PrimaryButton icon="pi pi-arrow-right" class="p-button-rounded" iconPos="right" @click="nextPage"/>
 		</div>
 	</div>
 </template>

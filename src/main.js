@@ -12,8 +12,10 @@ import ScrollPanel from 'primevue/scrollpanel';
 import MyToast from 'primevue/toast';
 import TabMenu from 'primevue/tabmenu';
 import MySteps from 'primevue/steps';
+import MyChart from 'primevue/chart';
+import InputNumber from 'primevue/inputnumber';
 
-import 'primevue/resources/themes/md-dark-deeppurple/theme.css';
+import 'primevue/resources/themes/md-light-deeppurple/theme.css';
 import 'primevue/resources/primevue.min.css';
 import 'primeicons/primeicons.css';
 
@@ -30,5 +32,7 @@ app.component('MyToast', MyToast);
 app.component('ScrollPanel', ScrollPanel);
 app.component('TabMenu', TabMenu);
 app.component('MySteps', MySteps);
+app.component('MyChart', MyChart);
+app.component('InputNumber', InputNumber);
 
 app.mount('#app');

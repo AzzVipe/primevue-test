@@ -3,7 +3,7 @@
 		<p>Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Sit optio autem eius. Hic illum tenetur consectetur qui, architecto quis perferendis facilis veniam? Facilis sed ab commodi, dicta recusandae similique placeat?Lorem ipsum dolor sit, amet, consectetur adipisicing elit. Sit optio autem eius. Hic illum tenetur consectetur qui, architecto quis perferendis facilis veniam? Facilis sed ab commodi, dicta recusandae similique placeat?</p>
 
 		<div class="buttons">
-			<PrimaryButton label="Back" class="pi pi-arrow-left"	@click="prevPage"/>
+			<PrimaryButton icon="pi pi-arrow-left" class="p-button-rounded" @click="prevPage"/>
 		</div>
 	</div>
 </template>

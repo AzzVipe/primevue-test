@@ -4,17 +4,17 @@
 		<div class="cards-container">
 			<div class="cards">
 				<div class="card" @click="nextPage('listed property')">
-					<img src="../assets/listed-building.jpeg" alt="">
+					<img src="../assets/listed-building.png" alt="">
 					<h1>Listed Property</h1>
 				</div>
 
 				<div class="card" @click="nextPage('conservation area')">
-					<img src="../assets/conserved-house.jpeg" alt="">
+					<img src="../assets/conserved-house.png" alt="">
 					<h1>Conservation Area</h1>
 				</div>
 
 				<div class="card" @click="nextPage('standard')">
-					<img src="../assets/standard-house.jpeg" alt="">
+					<img src="../assets/standard-house.png" alt="">
 					<h1>Standard</h1>
 				</div>
 			</div>
